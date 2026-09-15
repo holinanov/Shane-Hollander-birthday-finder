@@ -135,7 +135,7 @@ function getShaneIndex(month, day) {
     if (shaneImage.style.display === "none") return;
   
     const text = resultText.textContent;
-    const url = "https://your-github-pages-url-here.com";
+    const url = "https://holinanov.github.io/Shane-Hollander-birthday-finder/";
   
     const twitterUrl =
       `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
