@@ -1,32 +1,25 @@
-// ------------------------------
-// TRUE deterministic randomizer (no pattern)
-// ------------------------------
 function getShaneIndex(month, day) {
     const seed = `${month}-${day}`;
   
-    // Strong FNV-1a hash
+   
     let hash = 2166136261;
     for (let i = 0; i < seed.length; i++) {
       hash ^= seed.charCodeAt(i);
       hash = Math.imul(hash, 16777619);
     }
   
-    hash >>>= 0; // force unsigned
+    hash >>>= 0; 
   
     return hash % 31;
   }
   
-  // ------------------------------
-  // Shane images
-  // ------------------------------
+
   const shaneImages = [];
   for (let i = 1; i <= 31; i++) {
     shaneImages.push(`pics/ShaneH${i}.png`);
   }
   
-  // ------------------------------
-  // Shane texts
-  // ------------------------------
+
   const shaneTexts = [
     "Shane being a little silly boy at a rink interview",
     "Shane being confident he will make more goals this season",
@@ -61,9 +54,7 @@ function getShaneIndex(month, day) {
     "Shane doing yoga in hoochie daddy shorts"
   ];
   
-  // ------------------------------
-  // DOM elements
-  // ------------------------------
+ 
   const monthInput = document.getElementById("month");
   const dayInput = document.getElementById("day");
   const showButton = document.getElementById("showShane");
@@ -71,24 +62,18 @@ function getShaneIndex(month, day) {
   const shaneImage = document.getElementById("shaneImage");
   const shareButton = document.getElementById("shareTwitter");
   
-  // ------------------------------
-  // Days per month
-  // ------------------------------
+
   const daysInMonth = {
-    1: 31, 2: 28, 3: 31, 4: 30, 5: 31, 6: 30,
+    1: 31, 2: 29, 3: 31, 4: 30, 5: 31, 6: 30,
     7: 31, 8: 31, 9: 30, 10: 31, 11: 30, 12: 31
   };
   
-  // ------------------------------
-  // Landing page default
-  // ------------------------------
+ 
   resultText.textContent = "What Shane will come to your birthday party?";
   shaneImage.src = "";
   shaneImage.style.display = "none";
   
-  // ------------------------------
-  // Update day options when month changes
-  // ------------------------------
+
   monthInput.addEventListener("change", () => {
     const month = parseInt(monthInput.value, 10);
     dayInput.innerHTML = '<option value="">--</option>';
@@ -104,9 +89,7 @@ function getShaneIndex(month, day) {
     }
   });
   
-  // ------------------------------
-  // Show Shane
-  // ------------------------------
+
   showButton.addEventListener("click", () => {
     const month = parseInt(monthInput.value, 10);
     const day = parseInt(dayInput.value, 10);
@@ -128,9 +111,7 @@ function getShaneIndex(month, day) {
     shaneImage.style.display = "block";
   });
   
-  // ------------------------------
-  // Twitter share
-  // ------------------------------
+
   shareButton.addEventListener("click", () => {
     if (shaneImage.style.display === "none") return;
   
