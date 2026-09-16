@@ -52,11 +52,11 @@ function getShaneIndex(month, day) {
     "Shane being a little bit tipsy and a lot of bit frustrated",
     "Shane meeting his future husband for the first time",
     "Shane on the Phone with his beard/ex-girlfriend",
-    "Shane getting busy while on the phone with hayden",
-    "Shane being locked in",
+    "Shane getting busy while on the phone with Hayden",
+    "Shane being locked IN",
     "Shane sitting in the stairwell with hearteyes for his 'casual' hookup partner",
     "Shane seeing something he is very interested in",
-    "Shane coming out as more of a hole not a peg",
+    "Shane coming out as more of a hole than a peg",
     "Shane sweaty in the gym indirectly kissing someone by drinkingbottle",
     "Shane doing yoga in hoochie daddy shorts"
   ];
